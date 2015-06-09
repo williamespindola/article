@@ -1,0 +1,43 @@
+{
+    "name": "williamespindola/article",
+    "type": "library",
+    "description": "Article back-end library",
+    "homepage": "https://github.com/williamespindola/article",
+    "license": "BDS-3-Clause",
+    "authors": [
+        {
+            "name": "William Espindola",
+            "email": "oi@williamespindola.com.br",
+            "homepage": "http://williamespindola.com.br",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : ">=5.5",
+        "respect/relational": "^0.8.0",
+        "ocramius/generated-hydrator": "1.1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*",
+        "behat/behat": "3.0.6",
+        "behat/mink": "1.6.*",
+        "behat/mink-extension": "*",
+        "behat/mink-selenium2-driver": "*",
+        "behat/mink-goutte-driver": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "WilliamEspindola\\Article\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WilliamEspindola\\Article\\Test\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
