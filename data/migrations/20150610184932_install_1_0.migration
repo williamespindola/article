@@ -1,14 +1,28 @@
 #-*- coding:utf-8 -*-
 SQL_UP = u"""
 
-CREATE TABLE IF NOT EXISTS `article`.`author` (
+CREATE TABLE IF NOT EXISTS `author` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
   `email` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
-CREATE TABLE IF NOT EXISTS `article`.`article` (
+CREATE TABLE IF NOT EXISTS `category` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(100) NOT NULL,
+  `description` TEXT NULL,
+  `category_id` INT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_category_category1_idx` (`category_id` ASC),
+  CONSTRAINT `fk_category_category1`
+    FOREIGN KEY (`category_id`)
+    REFERENCES `article`.`category` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `article` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `title` TEXT NOT NULL,
   `content` LONGTEXT NOT NULL,
@@ -17,16 +31,23 @@ CREATE TABLE IF NOT EXISTS `article`.`article` (
   `modified` DATETIME NOT NULL,
   `metakeywords` TEXT NULL,
   `author_id` INT NULL,
+  `category_id` INT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_article_author1_idx` (`author_id` ASC),
+  INDEX `fk_article_category1_idx` (`category_id` ASC),
   CONSTRAINT `fk_article_author1`
     FOREIGN KEY (`author_id`)
     REFERENCES `article`.`author` (`id`)
     ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_article_category1`
+    FOREIGN KEY (`category_id`)
+    REFERENCES `article`.`category` (`id`)
+    ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE TABLE IF NOT EXISTS `article`.`comment` (
+CREATE TABLE IF NOT EXISTS `comment` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `author` VARCHAR(255) NULL,
   `email` VARCHAR(100) NULL,
@@ -53,5 +74,10 @@ ENGINE = InnoDB;
 """
 
 SQL_DOWN = u"""
+
+DROP TABLE `comment`;
+DROP TABLE `article`;
+DROP TABLE `author`;
+DROP TABLE `category`;
 
 """
