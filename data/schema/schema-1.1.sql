@@ -53,6 +53,7 @@ CREATE TABLE IF NOT EXISTS `article`.`article` (
   `metakeywords` TEXT NULL,
   `author_id` INT NULL,
   `category_id` INT NULL,
+  `image` TEXT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_article_author1_idx` (`author_id` ASC),
   INDEX `fk_article_category1_idx` (`category_id` ASC),

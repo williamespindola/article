@@ -47,6 +47,11 @@ class Article implements EntityInterface
     private $metakeywords;
 
     /**
+     * @var text
+     */
+    private $image;
+
+    /**
      * @return integer
      */
     public function getId()
@@ -179,5 +184,21 @@ class Article implements EntityInterface
     public function setMetakeywords($meta)
     {
         $this->metakeywords = $meta;
+    }
+
+    /**
+     * @return text image name
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @return void
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
     }
 }
