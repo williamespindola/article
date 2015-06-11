@@ -12,6 +12,8 @@ class Category
 
     private $category_id;
 
+    private $uri;
+
     public function getId()
     {
         return $this->id;
@@ -50,5 +52,15 @@ class Category
     public function setCategoryId(Category $categoryId)
     {
         $this->category_id = $categoryId;
+    }
+
+    public function getUri()
+    {
+        return $this->uri;
+    }
+
+    public function setUri($uri)
+    {
+        $this->uri = \URLify::filter($uri);
     }
 }

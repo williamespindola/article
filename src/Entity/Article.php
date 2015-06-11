@@ -52,6 +52,11 @@ class Article implements EntityInterface
     private $image;
 
     /**
+     * @var text
+     */
+    private $uri;
+
+    /**
      * @return integer
      */
     public function getId()
@@ -200,5 +205,21 @@ class Article implements EntityInterface
     public function setImage($image)
     {
         $this->image = $image;
+    }
+
+    /**
+     * @return text
+     */
+    public function getUri()
+    {
+        return $this->uri;
+    }
+
+    /**
+     * @return void
+     */
+    public function setUri($uri)
+    {
+        $this->uri = \URLify::filter($uri);
     }
 }
