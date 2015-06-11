@@ -13,6 +13,7 @@ CREATE TABLE IF NOT EXISTS `category` (
   `name` VARCHAR(100) NOT NULL,
   `description` TEXT NULL,
   `category_id` INT NULL,
+  `uri` VARCHAR(200) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_category_category1_idx` (`category_id` ASC),
   CONSTRAINT `fk_category_category1`
@@ -33,6 +34,7 @@ CREATE TABLE IF NOT EXISTS `article` (
   `author_id` INT NULL,
   `category_id` INT NULL,
   `image` TEXT NULL,
+  `uri` TEXT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_article_author1_idx` (`author_id` ASC),
   INDEX `fk_article_category1_idx` (`category_id` ASC),
