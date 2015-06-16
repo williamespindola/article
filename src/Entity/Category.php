@@ -2,7 +2,7 @@
 
 namespace WilliamEspindola\Article\Entity;
 
-class Category
+class Category implements EntityInterface
 {
     public $id;
 

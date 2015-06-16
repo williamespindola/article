@@ -2,7 +2,7 @@
 
 namespace WilliamEspindola\Article\Entity;
 
-class Author
+class Author implements EntityInterface
 {
     /**
      * @var integer Author id

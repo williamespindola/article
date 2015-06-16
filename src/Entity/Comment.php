@@ -2,7 +2,7 @@
 
 namespace WilliamEspindola\Article\Entity;
 
-class Comment
+class Comment implements EntityInterface
 {
     public $id;
 
