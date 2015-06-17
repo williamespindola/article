@@ -5,7 +5,9 @@ namespace WilliamEspindola\Article\Repository;
 use WilliamEspindola\Article\Entity\ArticleCategory;
 use WilliamEspindola\Article\Storage\ORM\StorageORMInterface;
 
-class ArticleCategoryRepository extends RepositoryAbstract
+class ArticleCategoryRepository 
+    extends RepositoryAbstract
+    implements RepositoryInterface
 {
     public function __construct(StorageORMInterface $storage)
     {

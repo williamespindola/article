@@ -5,7 +5,9 @@ namespace WilliamEspindola\Article\Repository;
 use WilliamEspindola\Article\Entity\Comment;
 use WilliamEspindola\Article\Storage\ORM\StorageORMInterface;
 
-class CommentRepository extends RepositoryAbstract
+class CommentRepository 
+    extends RepositoryAbstract
+    implements RepositoryInterface
 {
     public function __construct(StorageORMInterface $storage)
     {
