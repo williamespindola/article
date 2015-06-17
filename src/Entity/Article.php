@@ -161,7 +161,7 @@ class Article implements EntityInterface
     /**
      * @return object WilliamEspindola\Article\Entity\Author
      */
-    public function getAurhor()
+    public function getAuthor()
     {
         return $this->author_id;
     }
