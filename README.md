@@ -19,7 +19,7 @@ $ composer require williamespindola/article
 
 Database Schema
 
-Use [sql schemas](data/schema/) to install just replace all `dbname` for your database name.
+Use [sql schemas](data/) to install just replace all `dbname` for your database name.
 
 ## Usage
 
