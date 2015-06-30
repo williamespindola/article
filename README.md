@@ -53,13 +53,13 @@ If you discover any security related issues, please email oi@williamespindola.co
 The BSD License (BSD). Please see [License File](LICENSE.md) for more information.
 
 [ico-version]: https://img.shields.io/packagist/v/williamespindola/article.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/license-BSD-brightgreen.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/williamespindola/aticle/master.svg?style=flat-square
 [ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/williamespindola/aticle.svg?style=flat-square
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/williamespindola/aticle.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/williamespindola/aticle.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/williamespindola/aticle
+[link-packagist]: https://packagist.org/packages/williamespindola/article
 [link-travis]: https://travis-ci.org/williamespindola/aticle
 [link-scrutinizer]: https://scrutinizer-ci.com/g/williamespindola/aticle/code-structure
 [link-code-quality]: https://scrutinizer-ci.com/g/williamespindola/aticle
