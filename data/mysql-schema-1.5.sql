@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `dbname`.`article` (
   `content` LONGTEXT NOT NULL,
   `status` TINYINT NOT NULL,
   `created` DATETIME NOT NULL,
-  `modified` DATETIME NOT NULL,
+  `modified` DATETIME NULL,
   `metakeywords` TEXT NULL,
   `author_id` INT NULL,
   `image` TEXT NULL,
