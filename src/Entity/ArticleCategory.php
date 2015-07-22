@@ -5,6 +5,11 @@ namespace WilliamEspindola\Article\Entity;
 class ArticleCategory implements EntityInterface
 {
     /**
+     * @var int Id
+     */
+    public $id;
+
+    /**
      * @var object Article
      */
     private $article_id;
@@ -46,5 +51,15 @@ class ArticleCategory implements EntityInterface
     public function getCategory()
     {
         return $this->category_id;
+    }
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 }
